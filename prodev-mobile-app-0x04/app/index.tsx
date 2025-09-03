@@ -10,7 +10,7 @@ export default function Index() {
           style={styles.background} resizeMode="cover">
             
             <View style={{flex:1}}>
-              <Image source={require("@/assets/images/Logo.png")} style={styles.companyLogo}/>
+              <Image source={require("@/assets/images/logo.png")} style={styles.companyLogo}/>
               
               <View style={styles.textGroup}>
               <Text style={styles.textLarge}>Find your favorite place here</Text>
