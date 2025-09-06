@@ -1,4 +1,4 @@
-import PropertyListing from "@/components/PropertyListing";
+import PropertyListing from "@/components/PropertyListing/PropertyListing";
 import { FILTERS, SAMPLE_DATA } from "@/constants/data";
 import { styles } from "@/styles/_mainstyle";
 import {
