@@ -1,33 +1,21 @@
 import PropertyListing from "@/components/PropertyListing";
 import { FILTERS, SAMPLE_DATA } from "@/constants/data";
-import { styles } from "@/styles/propertyCardStyle";
-import { Feather } from "@expo/vector-icons";
+import { styles } from "@/styles/_mainstyle";
 import {
   Image,
   ScrollView,
   Text,
-  TextInput,
   TouchableHighlight,
   View
 } from "react-native";
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.cardGroup}>
-        <View style={styles.cardGroup}>
-          <View style={styles.cardTextGroup}>
-            <Text style={styles.cardLargeText}>Where to?</Text>
-            <TextInput
-              style={{ ...styles.cardTextGroup, ...styles.cardTextGroup }}
-              placeholder="Location . Date . Add guest"
-            />
-          </View>
-          <View style={styles.cardTextGroup}>
-            <Feather name="search" size={24} color="white" />
-          </View>
-        </View>
+    <View style={styles.backgroundImageContainer}>
+      <View style={styles.titleContainer}>
+        <Text style={styles.titleText}>Where to? </Text>
       </View>
+      
 
       <View
         style={{
@@ -35,10 +23,12 @@ const Home = () => {
           backgroundColor: "white",
         }}
       >
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <View style={styles.cardTextGroup}>
+       
+       
+        <ScrollView contentContainerStyle={styles.buttonGroup}>
+          <View style={styles.container}>
             {FILTERS.map((filter, index) => (
-              <View style={styles.container} key={index}>
+              <View style={styles.backgroundImageContainer} key={index}>
                 <Image
                   style={{
                     flex: 1,
@@ -53,11 +43,11 @@ const Home = () => {
         </ScrollView>
       </View>
 
-      <ScrollView style={styles.group}>
+      <ScrollView contentContainerStyle={styles.buttonGroup}>
         <PropertyListing listings={SAMPLE_DATA} />
-        <View style={styles.group}>
-          <TouchableHighlight style={styles.cardGroup}>
-            <Text style={styles.cardLargeText}>Show more</Text>
+        <View style={styles.container}>
+          <TouchableHighlight style={styles.container}>
+            <Text style={styles.titleSubText}>Show more</Text>
           </TouchableHighlight>
         </View>
       </ScrollView>

@@ -1,6 +1,6 @@
 import { styles } from "@/styles/_join";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 
@@ -10,7 +10,7 @@ export default function Index() {
       <SafeAreaView>
         <View style={styles.container}>
           <Ionicons name="arrow-back" size={25}/>
-          <Image source={require('@/assets/images/icon.png')}/>
+          {/* <Image source={require('@/assets/images/icon.png')}/> */}
         </View >
         
         <View style={{flex:1, padding:20}}>

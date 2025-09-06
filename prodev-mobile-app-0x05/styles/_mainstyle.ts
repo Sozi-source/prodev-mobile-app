@@ -94,6 +94,12 @@ const styles = StyleSheet.create({
     gap: SPACING.small,
     marginTop: 19,
   },
+
+  search:{
+    borderColor: "gray",
+    boxShadow: "blue"
+  }
 });
 
 export { styles };
+

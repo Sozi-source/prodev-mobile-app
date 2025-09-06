@@ -1,3 +1,4 @@
+import { styles } from "@/styles/_mainstyle";
 import { AntDesign, EvilIcons, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
@@ -14,7 +15,7 @@ const HomeRootLayout = () => {
       <Tabs.Screen name="search" options={{
         title: 'Search',
         headerShown: true,
-        tabBarIcon: ({ color }) => <Feather name="search" size={24} color={color} />,
+        tabBarIcon: ({ color }) => <Feather name="search" size={24} color={color} style={styles.search}/>,
       }} />
       <Tabs.Screen name="saved" options={{
         title: 'Saved',
@@ -23,7 +24,7 @@ const HomeRootLayout = () => {
       }} />
         <Tabs.Screen name="inbox" options={{
         title: 'Inbox',
-        headerShown: true,
+        headerShown: false,
         tabBarIcon: ({ color }) => <Ionicons name="chatbubbles-outline" size={24} color={color} />
       }} />
         <Tabs.Screen name="profile" options={{
